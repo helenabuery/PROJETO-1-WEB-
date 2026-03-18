@@ -1,0 +1,225 @@
+:root {
+    --primary-color: #a5d8e8;
+    --accent-color: #4c82a5;
+    --bg-light: #a5d8e8;
+    --secondary-color: #646C8F;
+    --neutral-color: #4c82a5;
+    --dark-text: #000000;
+}
+
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--dark-text);
+    background-color: #fdfdfd;
+    scroll-behavior: smooth;
+}
+
+
+/* Navbar */
+.navbar {
+    background-color: white;
+    border-bottom: 3px solid var(--accent-color);
+}
+
+
+.navbar-brand span {
+    color: var(--secondary-color);
+}
+
+
+.nav-link {
+    color: var(--primary-color) !important;
+    font-weight: 500;
+}
+
+
+/* Hero Section */
+.hero-section {
+    min-height: 80vh;
+    background: linear-gradient(135deg, var(--bg-light) 0%, #fff 100%);
+}
+
+
+.hero-placeholder {
+    height: 400px;
+    background-color: var(--neutral-color);
+    border-radius: 20px;
+    background-image: url('imgs/Untitled Project.jpg'); 
+    background-size: cover;
+}
+
+
+/* Botões Customizados */
+.btn-custom {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+
+.btn-custom:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+
+/* Títulos */
+.section-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background: var(--accent-color);
+    margin-top: 10px;
+}
+
+
+/* Cards */
+.card-hover {
+    transition: transform 0.3s ease;
+    border-top: 4px solid var(--neutral-color) !important;
+}
+
+
+.card-hover:hover {
+    transform: translateY(-10px);
+    border-top-color: var(--accent-color) !important;
+}
+
+
+.icon-box {
+    font-size: 2.5rem;
+}
+
+
+/* Quiz Section */
+.bg-dark-custom {
+    background-color: var(--primary-color);
+}
+
+
+.bg-light-custom {
+    background-color: var(--bg-light);
+}
+
+
+footer {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+
+/* =========================
+   DARK MODE
+========================= */
+body.dark-mode {
+    --bg-light: #2d2d2d;
+    --dark-text: #f1f1f1;
+    --primary-color: #5e4b50;
+    --secondary-color: #8fa4c7;
+    background-color: #1e1e1e;
+    color: var(--dark-text);
+}
+
+
+/* Transição suave */
+body, .navbar, .card, footer {
+    transition: all 0.3s ease;
+}
+
+
+/* Ajustes para dark */
+body.dark-mode .navbar {
+    background-color: #2b2b2b;
+}
+
+
+body.dark-mode .card {
+    background-color: #333;
+    color: white;
+}
+
+
+body.dark-mode footer {
+    background-color: #1a1a1a;
+}
+
+
+/* =========================
+   CONTROLE DE FONTE
+========================= */
+html {
+    font-size: 16px;
+}
+
+
+.bg-accent {
+    background-color: var(--accent-color) !important;
+}
+
+
+#quiz-card {
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
+
+.quiz-btn {
+    border: 2px solid var(--neutral-color);
+    padding: 15px;
+    border-radius: 12px;
+    transition: all 0.2s;
+    background: white;
+    font-weight: 500;
+}
+
+
+.quiz-btn:hover {
+    border-color: var(--secondary-color);
+    background-color: #f8f9fa;
+    transform: scale(1.02);
+}
+
+
+/* Animação de Feedback */
+.correct-flash {
+    animation: success-pulse 0.5s;
+}
+
+
+@keyframes success-pulse {
+    0% { background-color: #fff; }
+    50% { background-color: #d4edda; }
+    100% { background-color: #fff; }
+}
+
+/* Estilo adicional para os badges das notícias */
+#noticias .badge {
+    font-weight: 500;
+    padding: 0.5em 0.8em;
+    border-radius: 5px;
+}
+
+#noticias .card {
+    transition: transform 0.2s ease-in-out;
+}
+
+#noticias .card:hover {
+    transform: scale(1.03);
+}
+
+/* Garante que o texto de notícias no Dark Mode fique visível */
+body.dark-mode #noticias .card {
+    background-color: #3d3d3d;
+    color: #f1f1f1;
+}
+
+body.dark-mode #noticias .text-muted {
+    color: #ccc !important;
+}

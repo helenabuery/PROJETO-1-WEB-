@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EducaSegura | Proteção contra Golpes Digitais</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+    <nav class="navbar navbar-expand-lg sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">AHLF<span>CREATIVE</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sobre">O que são Golpes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tipos">Tipos de Fraudes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#quiz">Teste seu Conhecimento</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-custom ms-lg-3" href="#contato">Notícias</a></li>
+                </ul>
+               
+<div class="d-flex gap-2 ms-3 align-items-center">
+   
+    <button id="themeToggle" class="btn btn-sm btn-outline-secondary">🌙</button>
+    <button id="fontDecrease" class="btn btn-sm btn-outline-secondary">A-</button>
+    <button id="fontIncrease" class="btn btn-sm btn-outline-secondary">A+</button>
+</div>
+            </div>
+        </div>
+    </nav>
+
+
+    <header id="inicio" class="hero-section d-flex align-items-center">
+        <div class="container text-center text-lg-start">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold">Quem entende, se protege melhor.</h1>
+                    <p class="lead my-4">Aprenda a identificar ameaças, proteger seus dados e navegar com confiança em um mundo cada vez mais conectado.</p>
+                    <a href="#sobre" class="btn btn-lg btn-custom">Dar o primeiro passo</a>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block">
+                    <div class="hero-placeholder shadow-lg"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <section id="sobre" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2 class="section-title">O que são Golpes Digitais?</h2>
+                    <p>Golpes digitais são estratégias fraudulentas criadas por criminosos para enganar usuários e obter vantagens ilícitas, como senhas bancárias, dados pessoais ou transferências financeiras diretas.</p>
+                    <p>Diferente de vírus comuns, esses ataques exploram o elo mais fraco da corrente: <strong>o comportamento humano</strong>.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="card p-4 border-0 shadow-sm bg-light-custom">
+                        <h5>Você sabia?</h5>
+                        <p class="mb-0">Grande parte das brechas de segurança começam com um erro humano, como clicar em um link suspeito.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="tipos" class="py-5 bg-white">
+        <div class="container text-center">
+            <h2 class="mb-5 section-title">Principais Ataques</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 card-hover border-0 shadow-sm p-4">
+                        <div class="icon-box mb-3">📧</div>
+                        <h4>Phishing</h4>
+                        <p>E-mails ou mensagens falsas que fingem ser de empresas confiáveis para roubar suas credenciais.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 card-hover border-0 shadow-sm p-4">
+                        <div class="icon-box mb-3">🧠</div>
+                        <h4>Engenharia Social</h4>
+                        <p>Manipulação psicológica para convencer a vítima a entregar informações confidenciais voluntariamente.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 card-hover border-0 shadow-sm p-4">
+                        <div class="icon-box mb-3">📱</div>
+                        <h4>Golpes de WhatsApp</h4>
+                        <p>Clonagem de perfil ou pedidos urgentes de dinheiro fingindo ser um familiar ou amigo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="quiz" class="py-5 bg-dark-custom text-white">
+    <div class="container">
+        <div class="row justify-content-center text-center">
+            <div class="col-md-8">
+                <h2 class="mb-4">Desafio do Guardião Digital 🛡️</h2>
+               
+                <div class="progress mb-4" style="height: 10px; background-color: rgba(255,255,255,0.2);">
+                    <div id="quiz-progress" class="progress-bar bg-accent" style="width: 0%"></div>
+                </div>
+
+
+                <div id="quiz-card" class="card p-4 border-0 shadow-lg text-dark">
+                    <div id="question-container">
+                        <span id="question-number" class="badge bg-secondary mb-2">Questão 1 de 5</span>
+                        <h4 id="question-text" class="mb-4">Carregando pergunta...</h4>
+                        <div id="options-container" class="d-grid gap-3">
+                            </div>
+                    </div>
+
+
+                    <div id="result-container" class="d-none">
+                        <h2 class="display-4">🎉</h2>
+                        <h3 id="result-title">Incrível!</h3>
+                        <p id="result-text" class="lead"></p>
+                        <button class="btn btn-custom mt-3" onclick="resetQuiz()">Tentar Novamente</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="noticias" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5 section-title">Notícias: Alerta de Golpes Recentes</h2>
+        <div class="row g-4" id="news-container">
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body">
+                        <span class="badge bg-danger mb-2">Novo Golpe</span>
+                        <h5 class="card-title">Fraude do "Falso Emprego" via SMS</h5>
+                        <p class="card-text small text-muted">Criminosos prometem salários altos para tarefas simples no celular. O objetivo é roubar dados bancários.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body">
+                        <span class="badge bg-warning text-dark mb-2">Atenção</span>
+                        <h5 class="card-title">O Golpe do "Presente de Aniversário"</h5>
+                        <p class="card-text small text-muted">Vítimas recebem ligações dizendo que há um presente, mas precisam pagar uma taxa de entrega na maquininha adulterada.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body">
+                        <span class="badge bg-info mb-2">Dica</span>
+                        <h5 class="card-title">Cuidado com QR Codes Maliciosos</h5>
+                        <p class="card-text small text-muted">Ataques de "Quishing" estão inserindo códigos falsos em estabelecimentos para desviar pagamentos Pix.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+   
+
+
+    <footer class="py-4 text-center">
+    <p>&copy; 2026 Projeto 1 Web - Proteção contra golpes digitais</p>
+    <p>"O elo mais fraco da cadeia de segurança é o elemento humano." - Kevin Mitnick </p>
+
+
+    <div class="d-flex justify-content-center gap-3">
+        <a href="https://github.com/helencloudbuer" target="_blank" class="btn btn-light btn-sm">Ana Helena Buery</a>
+        <a href="https://github.com/LeticiaPFranca" target="_blank" class="btn btn-light btn-sm">Letícia Franca</a>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
